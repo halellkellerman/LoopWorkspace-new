@@ -30,7 +30,7 @@ platform :ios do
     
     update_project_team(
       path: "#{GITHUB_WORKSPACE}/Loop/Loop.xcodeproj",
-      teamid: "#{TEAMID}"
+      teamid: "#39PCU5Q485"
     )
 
     api_key = app_store_connect_api_key(
@@ -40,7 +40,7 @@ platform :ios do
     )
 
     previous_build_number = latest_testflight_build_number(
-      app_identifier: "com.#{TEAMID}.loopkit.Loop",
+      app_identifier: "com.#39PCU5Q485.loopkit.Loop",
       api_key: api_key,
     )
 
@@ -55,12 +55,12 @@ platform :ios do
       type: "appstore",
       git_basic_authorization: Base64.strict_encode64("#{GITHUB_REPOSITORY_OWNER}:#{GH_PAT}"),
       app_identifier: [
-        "com.#{TEAMID}.loopkit.Loop", 
-        "com.#{TEAMID}.loopkit.Loop.statuswidget", 
-        "com.#{TEAMID}.loopkit.Loop.LoopWatch.watchkitextension", 
-        "com.#{TEAMID}.loopkit.Loop.LoopWatch", 
-        "com.#{TEAMID}.loopkit.Loop.Loop-Intent-Extension",
-        "com.#{TEAMID}.loopkit.Loop.LoopWidgetExtension"
+        "com.#39PCU5Q485.loopkit.Loop", 
+        "com.#39PCU5Q485.loopkit.Loop.statuswidget", 
+        "com.#39PCU5Q485.loopkit.Loop.LoopWatch.watchkitextension", 
+        "com.#39PCU5Q485.loopkit.Loop.LoopWatch", 
+        "com.#39PCU5Q485.loopkit.Loop.Loop-Intent-Extension",
+        "com.#39PCU5Q485.loopkit.Loop.LoopWidgetExtension"
       ]
     )
 
@@ -70,7 +70,7 @@ platform :ios do
 
     update_code_signing_settings(
       path: "#{GITHUB_WORKSPACE}/Loop/Loop.xcodeproj",
-      profile_name: mapping["com.#{TEAMID}.loopkit.Loop"],
+      profile_name: mapping["com.#39PCU5Q485.loopkit.Loop"],
       code_sign_identity: "iPhone Distribution",
       targets: ["Loop"]
     )
@@ -83,35 +83,35 @@ platform :ios do
 
     update_code_signing_settings(
       path: "#{GITHUB_WORKSPACE}/Loop/Loop.xcodeproj",
-      profile_name: mapping["com.#{TEAMID}.loopkit.Loop.statuswidget"],
+      profile_name: mapping["com.#39PCU5Q485.loopkit.Loop.statuswidget"],
       code_sign_identity: "iPhone Distribution",
       targets: ["Loop Status Extension"]
     )
     
     update_code_signing_settings(
       path: "#{GITHUB_WORKSPACE}/Loop/Loop.xcodeproj",
-      profile_name: mapping["com.#{TEAMID}.loopkit.Loop.LoopWatch.watchkitextension"],
+      profile_name: mapping["com.#39PCU5Q485.loopkit.Loop.LoopWatch.watchkitextension"],
       code_sign_identity: "iPhone Distribution",
       targets: ["WatchApp Extension"]
     )
     
     update_code_signing_settings(
       path: "#{GITHUB_WORKSPACE}/Loop/Loop.xcodeproj",
-      profile_name: mapping["com.#{TEAMID}.loopkit.Loop.LoopWatch"],
+      profile_name: mapping["com.#39PCU5Q485.loopkit.Loop.LoopWatch"],
       code_sign_identity: "iPhone Distribution",
       targets: ["WatchApp"]
     )
     
     update_code_signing_settings(
       path: "#{GITHUB_WORKSPACE}/Loop/Loop.xcodeproj",
-      profile_name: mapping["com.#{TEAMID}.loopkit.Loop.Loop-Intent-Extension"],
+      profile_name: mapping["com.#39PCU5Q485.loopkit.Loop.Loop-Intent-Extension"],
       code_sign_identity: "iPhone Distribution",
       targets: ["Loop Intent Extension"]
     )
     
     update_code_signing_settings(
       path: "#{GITHUB_WORKSPACE}/Loop/Loop.xcodeproj",
-      profile_name: mapping["com.#{TEAMID}.loopkit.Loop.LoopWidgetExtension"],
+      profile_name: mapping["com.#39PCU5Q485.loopkit.Loop.LoopWidgetExtension"],
       code_sign_identity: "iPhone Distribution",
       targets: ["Loop Widget Extension"]
     )
